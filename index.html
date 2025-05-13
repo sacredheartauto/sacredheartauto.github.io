@@ -3,106 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacred Heart Automotive Repair LLC</title>
+    <title>Sacred Heart Automotive Repair LLC | Florence, KY</title>
+    <meta name="description" content="Professional automotive repair services in Florence, Kentucky. Specializing in all makes and models with certified technicians.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="bg-green-700 p-4">
+    <nav class="bg-green-700 p-4 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="/api/placeholder/192/192" alt="Sacred Heart Automotive Logo" class="w-48 h-48 mr-4">
-                <span class="text-white text-xl font-bold">Sacred Heart Automotive</span>
+                <img src="/api/placeholder/192/192" alt="Sacred Heart Automotive Logo" class="w-16 h-16 mr-2 md:w-24 md:h-24">
+                <div>
+                    <span class="text-white text-lg md:text-2xl font-bold block">Sacred Heart Automotive</span>
+                    <span class="text-white text-sm md:text-base hidden md:block">Quality Auto Service in Florence, KY</span>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-4">
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-white hover:text-gray-200 font-medium">About</a>
+                <a href="#services" class="text-white hover:text-gray-200 font-medium">Services</a>
+                <a href="#testimonials" class="text-white hover:text-gray-200 font-medium">Testimonials</a>
+                <a href="#contact" class="text-white hover:text-gray-200 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 mt-2 p-4 rounded-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="text-white hover:text-gray-200">About</a>
                 <a href="#services" class="text-white hover:text-gray-200">Services</a>
+                <a href="#testimonials" class="text-white hover:text-gray-200">Testimonials</a>
                 <a href="#contact" class="text-white hover:text-gray-200">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-green-600 text-white py-20">
+    <header class="bg-green-600 text-white py-16 md:py-24">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-8 md:mb-0">
-                <h1 class="text-4xl font-bold mb-4">Sacred Heart Automotive Repair LLC</h1>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Sacred Heart Automotive Repair LLC</h1>
                 <p class="text-xl mb-6">Professional auto repair services for all makes and models</p>
-                <a href="tel:859-609-1773" class="bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700">
-                    Call Now: 859-609-1773
-                </a>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="tel:859-609-1773" class="bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 text-center inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i> Call Now: 859-609-1773
+                    </a>
+                    <a href="#contact" class="bg-white text-green-700 py-3 px-6 rounded-lg hover:bg-gray-100 text-center">
+                        Contact Us
+                    </a>
+                </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <img src="/api/placeholder/400/300" alt="Auto Repair Shop" class="rounded-lg shadow-lg">
+                <img src="/api/placeholder/500/350" alt="Auto Repair Shop" class="rounded-lg shadow-xl">
             </div>
         </div>
     </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Sacred Heart Automotive</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="/api/placeholder/500/350" alt="Our Shop" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 text-green-700">Our Story</h3>
+                    <p class="mb-4">At Sacred Heart Automotive, we've been serving the Florence community and Northern Kentucky with dedication and expertise. As a locally owned business, we take pride in providing honest, reliable, and affordable auto repair services.</p>
+                    <p class="mb-4">Our owner, Chris Fullerton, brings years of experience and a passion for quality service. We believe in treating every customer like family and every vehicle with the utmost care.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-check-circle text-green-600 mr-2 text-xl"></i>
+                                <h4 class="font-bold">Quality Service</h4>
+                            </div>
+                            <p class="text-sm">We never compromise on quality and use only the best parts for your vehicle.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-tools text-green-600 mr-2 text-xl"></i>
+                                <h4 class="font-bold">Expert Technicians</h4>
+                            </div>
+                            <p class="text-sm">Our certified mechanics have the experience to handle any repair job.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-4">General Services</h3>
                     <ul class="space-y-2">
-                        <li>• All Makes/All Models</li>
-                        <li>• Maintenance</li>
-                        <li>• Oil Change</li>
-                        <li>• Tire Rotations</li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>All Makes/All Models</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Maintenance Services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Oil Changes & Fluid Services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Tire Rotations & Balancing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Brake Services</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-4">Diagnostics</h3>
                     <ul class="space-y-2">
-                        <li>• General Diagnostic</li>
-                        <li>• Electrical Diagnostic</li>
-                        <li>• Computer Diagnostics</li>
-                        <li>• Check Engine Light</li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>General Diagnostic Services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Electrical System Diagnostics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Computer Diagnostics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Check Engine Light Investigation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Performance Testing</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-wrench"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-4">Additional Services</h3>
                     <ul class="space-y-2">
-                        <li>• Inspections</li>
-                        <li>• Repair Services</li>
-                        <li>• Preventive Maintenance</li>
-                        <li>• And More...</li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Vehicle Inspections</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Major & Minor Repair Services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Preventive Maintenance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Engine & Transmission Service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">•</span>
+                            <span>Suspension & Steering Repairs</span>
+                        </li>
                     </ul>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="tel:859-609-1773" class="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 inline-flex items-center">
+                    <i class="fas fa-phone mr-2"></i> Call to schedule an appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow">
+                    <div class="text-yellow-400 flex mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-4">"Chris and his team always take great care of my vehicles. They're honest, reliable, and their prices are fair. I've been a customer for years and wouldn't go anywhere else!"</p>
+                    <div class="font-bold">- Michael T.</div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow">
+                    <div class="text-yellow-400 flex mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-4">"I was having issues with my car's electrical system that no one else could figure out. Sacred Heart diagnosed and fixed the problem in one day. Excellent service and expertise!"</p>
+                    <div class="font-bold">- Sarah L.</div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow">
+                    <div class="text-yellow-400 flex mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-4">"As a woman, I've often felt talked down to at auto shops. Not here - they explain everything clearly, show me the issues, and never try to sell unnecessary services. Highly recommended!"</p>
+                    <div class="font-bold">- Jennifer R.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16">
+    <section id="contact" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-8">
-                        <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-                        <div class="space-y-4">
+                        <h3 class="text-2xl font-bold mb-6 text-green-700">Get In Touch</h3>
+                        <div class="space-y-4 mb-8">
                             <p class="flex items-center">
+                                <i class="fas fa-phone text-green-600 w-8"></i>
                                 <span class="font-bold w-24">Phone:</span>
                                 <a href="tel:859-609-1773" class="text-green-700 hover:text-green-800">859-609-1773</a>
                             </p>
                             <p class="flex items-center">
+                                <i class="fas fa-clock text-green-600 w-8"></i>
                                 <span class="font-bold w-24">Hours:</span>
                                 Monday-Friday: 8am - 5pm
                             </p>
                             <p class="flex items-center">
+                                <i class="fas fa-user text-green-600 w-8"></i>
                                 <span class="font-bold w-24">Owner:</span>
                                 Chris Fullerton
                             </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-green-600 w-8"></i>
+                                <span class="font-bold w-24">Address:</span>
+                                Florence, KY
+                            </p>
                         </div>
+                        
+                        <h4 class="font-bold text-lg mb-3">Send Us a Message</h4>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition-colors duration-300">Send Message</button>
+                        </form>
                     </div>
                     <div class="bg-green-600 p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-4">Why Choose Us?</h3>
-                        <ul class="space-y-3">
-                            <li>✓ Professional, certified technicians</li>
-                            <li>✓ Comprehensive diagnostic services</li>
-                            <li>✓ Quality repairs guaranteed</li>
-                            <li>✓ Fair and transparent pricing</li>
+                        <h3 class="text-2xl font-bold mb-6">Why Choose Us?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-xl mr-3 mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Professional, Certified Technicians</h4>
+                                    <p class="text-green-100">Our mechanics are ASE certified with years of experience working on all vehicle types.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-xl mr-3 mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Comprehensive Diagnostic Services</h4>
+                                    <p class="text-green-100">We use state-of-the-art equipment to accurately diagnose your vehicle's issues.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-xl mr-3 mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Quality Repairs Guaranteed</h4>
+                                    <p class="text-green-100">We stand behind our work with solid warranties on parts and labor.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-xl mr-3 mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Fair and Transparent Pricing</h4>
+                                    <p class="text-green-100">No hidden fees or unnecessary services - just honest work at fair prices.</p>
+                                </div>
+                            </li>
                         </ul>
+                        <div class="mt-8 text-center">
+                            <a href="tel:859-609-1773" class="bg-white text-green-700 py-2 px-6 rounded-lg hover:bg-gray-100 inline-block">
+                                Call us now: 859-609-1773
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,9 +334,37 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2024 Sacred Heart Automotive Repair LLC. All rights reserved.</p>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center mb-2">
+                        <img src="/api/placeholder/48/48" alt="Sacred Heart Automotive Logo" class="w-10 h-10 mr-2">
+                        <span class="text-xl font-bold">Sacred Heart Automotive</span>
+                    </div>
+                    <p class="text-gray-400">Quality auto repair you can trust</p>
+                </div>
+                <div class="mb-4 md:mb-0">
+                    <h4 class="font-bold mb-2">Quick Links</h4>
+                    <div class="flex space-x-4">
+                        <a href="#about" class="text-gray-400 hover:text-white">About</a>
+                        <a href="#services" class="text-gray-400 hover:text-white">Services</a>
+                        <a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="tel:859-609-1773" class="text-gray-400 hover:text-white flex items-center">
+                        <i class="fas fa-phone mr-2"></i> 859-609-1773
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center">
+                <p>© 2024 Sacred Heart Automotive Repair LLC. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
 </body>
 </html>
